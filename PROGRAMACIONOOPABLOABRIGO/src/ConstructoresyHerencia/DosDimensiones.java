@@ -3,7 +3,7 @@ package ConstructoresyHerencia;
 
 
 public class DosDimensiones {
-     private double base;
+    private double base;
     private double altura;
     //Métodos de acceso para base y altura
     double getBase(){return base;}
