@@ -12,7 +12,7 @@ public class Archivos {
         System.out.println(archivo.isDirectory());
         //Para saber la fecha de modificacion del archivo
         System.out.println(archivo.lastModified());
-        //Pra obtener el nombre del archivo
+        //Para obtener el nombre del archivo
         System.out.println(archivo.getName());
        //Para borrar el archivo
        //System.out.println(archivo.delete());
