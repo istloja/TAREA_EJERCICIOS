@@ -1,5 +1,5 @@
 
-package Archivos_Cerealizable;
+package Archivos_Serealizable;
 
 import java.io.Serializable;
 
