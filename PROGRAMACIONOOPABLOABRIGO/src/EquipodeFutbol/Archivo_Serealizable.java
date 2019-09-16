@@ -39,8 +39,8 @@ public class Archivo_Serealizable {
     public static void main(String[] args) throws IOException {
            Archivo_Serealizable obj= new Archivo_Serealizable ();
            Equipo objeto = new Equipo ("Liga de Quito","blancol", 25, "Antonio Valencia", new Futbolista("Leonel", "Messi", 10, "Delantero", 45,54));
-           obj.escribirarchivo("C:\\Users\\FRANCO\\Desktop\\serearizable.txt", objeto);
-           obj.leerarchivo("C:\\Users\\FRANCO\\Desktop\\serearizable.txt");
+           obj.escribirarchivo("C:\\Users\\Usuario\\Desktop\\PABLO.txt", objeto);
+           obj.leerarchivo("C:\\Users\\Usuario\\Desktop\\PABLO.txt");
     }
    
     
