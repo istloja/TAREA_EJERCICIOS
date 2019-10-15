@@ -29,10 +29,11 @@ public class Conexion {
         }
     }
     public static void main(String[] args) {
-        Conexion paao = new Conexion ();
-        paao.Conexion("root","ROOT");
-        paao.escribir("root","ROOT", 12345, "Lolo", "Vaca", "1133464797", 45);
-        
+          Conexion paao = new Conexion ();
+//        paao.Conexion("root","ROOT");
+//        paao.escribir("root","ROOT", 12345, "Lolo", "Vaca", "1133464797", 45);
+//        paao.actualizar("root", "ROOT", 12345, "Pablo");
+          paao.eliminar("root", "ROOT", 1);
 
     }
     
@@ -52,8 +53,37 @@ public class Conexion {
         catch (Exception e) {
             System.out.println(e);        
         }
-    
     }
     
-   
-}
+        public void actualizar (String usuario, String clave, int idpersona, String nombre ){
+            
+            try {
+            DriverManager.registerDriver(new org.gjt.mm.mysql.Driver());
+            Connection poo = DriverManager.getConnection("jdbc:mysql://localhost/futbol_db", usuario, clave);
+            PreparedStatement s = poo.prepareStatement("UPDATE persona set persona=? where idpersona=? ");
+            s.setString(1, nombre);
+            s.setInt(2, idpersona);
+            s.executeUpdate();
+            
+            } catch (Exception e) {
+            System.out.println(e); 
+            }
+}            
+        public void eliminar(String usuario, String clave, int idpersona){
+            try {
+            DriverManager.registerDriver(new org.gjt.mm.mysql.Driver());
+            Connection poo = DriverManager.getConnection("jdbc:mysql://localhost/futbol_db", usuario, clave);
+            PreparedStatement s = poo.prepareStatement("DELETE persona set idpersona where idpersona=? ");
+            s.setInt(idpersona, 1);
+                
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+                
+                
+                
+            }
+                
+      }      
+
+
